@@ -3,7 +3,7 @@ require_relative 'coins/coin'
 require 'json'
 
 def read_coins
-  file = File.read 'mycoins.json'
+  file = File.read 'coinlist.json'
   my_coins = JSON.parse(file)
   my_coins.keys.map do |coin|
     Coin.new(coin, my_coins[coin])
